@@ -1,0 +1,22 @@
+[
+	{
+		"name": "hello-1",
+		"url": "test/one/((\\d+|_\\d+):var1)/",
+		"method": "get"
+	},
+	{
+		"name": "one-hello",
+		"url": "test/one/(:var1)/",
+		"method": "get"
+	},
+	{
+		"name": "two-hello",
+		"url": "test/one/(:var1)",
+		"method": "get"
+	},
+	{
+		"name": "tree-hello",
+		"url": "test/one/(:var1)/222",
+		"method": "get"
+	}
+]

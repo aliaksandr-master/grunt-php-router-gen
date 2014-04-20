@@ -1,0 +1,42 @@
+{
+	"root": "/controllers",
+
+	"<user>": {
+
+		"path": "/user",
+
+		"<get>": {
+			"<all>": {
+			},
+			"<all2>": {
+			},
+			"<one>": {
+			}
+		},
+
+		"<post>": {
+		}
+	},
+
+	"<hello>": {
+		"params": {
+			"ggg": 111
+		},
+		"<get>": {
+			"params": {
+				"ggg": 222
+			}
+		}
+	},
+
+	"<session>": {
+		"params": {
+			"aaaa": 111
+		},
+		"<get>": {
+			"params": {
+				"aaaa": 222
+			}
+		}
+	}
+}

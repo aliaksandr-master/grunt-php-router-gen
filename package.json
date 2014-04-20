@@ -1,0 +1,44 @@
+{
+	"name": "grunt-php-router-gen",
+	"description": "Create a Fastest Php router by grunt",
+	"version": "0.1.0",
+	"homepage": "https://github.com/aliaksandr-pasynkau/grunt-php-router-gen",
+	"author": {
+		"name": "Aliaksandr Pasynkau",
+		"email": "alxe.master@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/aliaksandr-pasynkau/grunt-php-router-gen.git"
+	},
+	"bugs": {
+		"url": "https://github.com/aliaksandr-pasynkau/grunt-php-router-gen/issues"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "https://github.com/aliaksandr-pasynkau/grunt-php-router-gen/blob/master/LICENSE"
+		}
+	],
+	"engines": {
+		"node": ">= 0.8.0"
+	},
+	"scripts": {
+		"test": "grunt test"
+	},
+	"dependencies": {
+		"grunt": "~0.4.4",
+		"lodash": "~2.4.1"
+	},
+	"devDependencies": {
+		"grunt-contrib-jshint": "^0.9.2",
+		"grunt-contrib-clean": "^0.5.0",
+		"load-grunt-tasks": "latest"
+	},
+	"peerDependencies": {
+		"grunt": "~0.4.4"
+	},
+	"keywords": [
+		"gruntplugin"
+	]
+}
