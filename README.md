@@ -37,17 +37,43 @@ grunt.initConfig({
 
 ### Options
 
-#### options.separator
-Type: `String`
-Default value: `',  '`
+#### options.map
+Type: `object|function|null`
+Default value: `null`
 
-A string value that is used to do something with whatever.
+route's data (such as params and other).
+This object will be returned if route found match with route.uri
+```js
+{
+  someRouteName: {
+    params: {
+      someUrlParamName: defaultValue1,
+      someParamName: defaultValue2
+    }
+  }
+}
+```
 
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
+#### options.aliases
+Type: `object`
+Default value: `{}`
 
-A string value that is used to do something else with whatever else.
+Constraint aliases. for use in url patterns as (*decimal*:paramName)
+```js
+{
+  'decimal': '\\d+',
+  'integer': '-?\\d+'
+}
+```
+
+#### options.parseUrlSegment
+Type: `function`
+
+Detect args in current url segment.
+
+default detection format of simple url param: (PATTERN_OR_ALIAS:PARAM_NAME)
+default detection format of infinite url params: (...)
+
 
 ### Usage Examples
 
@@ -58,11 +84,24 @@ In this example, the default options are used to do something with whatever. So 
 grunt.initConfig({
   php_router_gen: {
     options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
+    files: [
+    	{
+          'dest/routes.json': 'source/routes.json',
+        }
+    ],
   },
 });
+```
+
+##### source/routes.json
+```
+[
+  {
+    "name": "some route name", // correct string.
+    "url": "/pattern/(:to)/detect/(...)", // correct url string with regExp parts and route-get-args
+    "method": "get" // if method not matter use NULL
+  }
+]
 ```
 
 #### Custom Options
