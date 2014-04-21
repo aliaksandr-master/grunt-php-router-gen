@@ -68,7 +68,8 @@ read: function (fpath) {
       readMethod = 'readYML';
     }
   return grunt.file[readMethod](fpath);
-},```
+},
+```
 
 #### options.parse (fileContent)
 Type: `function`
@@ -81,6 +82,7 @@ parse: function (fileContent) {
   return fileContent; // must return array of rows of routes
 },
 ```
+
 > MUST RETURN ARRAY of OBJECTS
 > [
 >   {
@@ -178,6 +180,7 @@ Default value: `null`
 
 route's data (such as params and other).
 This object will be returned if route found match with route.uri
+
 ```js
 {
   someRouteName: {
@@ -192,6 +195,7 @@ This object will be returned if route found match with route.uri
 #### options.getRouteParamsByMap (routeName, map)
 
 Get route data from route-data-map.
+
 ```js
 // example
 getRouteParamsByMap: function (routeName, map) {
@@ -207,6 +211,7 @@ Type: `object`
 Default value: `{}`
 
 Constraint aliases. for use in url patterns as (decimal:paramName)
+
 ```js
 {
   'decimal': '\\d+',
@@ -239,23 +244,8 @@ default detection format of infinite url params: (...)
 
 ### Usage Examples
 
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
-```js
-grunt.initConfig({
-  php_router_gen: {
-    options: {},
-    files: [
-    	{
-          'dest/routes.json': 'source/routes.json',
-        }
-    ],
-  },
-});
-```
-
 ##### source/routes.json
+
 ```
 [
   {
@@ -281,7 +271,7 @@ grunt.initConfig({
 ]
 ```
 
-#### Custom Options
+#### gruntfile
 In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
 
 ```js
@@ -328,6 +318,7 @@ get     hello/(\d+:ggg)?         ->   hello.get
 ```
 
 #### map test/two/map_two.json
+
 ```js
 {
   "root": "/controllers",
@@ -364,6 +355,7 @@ get     hello/(\d+:ggg)?         ->   hello.get
 ```
 
 #### gruntfile
+
 ```js
 grunt.initConfig({
   php_router_gen: {
@@ -477,6 +469,7 @@ grunt.initConfig({
 ## usage in PHP
 
 ### detect current route
+
 ```php
 require_once('Router.php');
 
@@ -489,6 +482,7 @@ var_dump($result);
 ```
 
 ### get url by route name and params (reverse)
+
 ```
 require_once('Router.php');
 
