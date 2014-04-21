@@ -87,21 +87,16 @@ parse: function (fileContent) {
 },
 ```
 
-> MUST RETURN ARRAY of OBJECTS
-
-> [
-
->   {
-
->     name: 'someName', // required
-
->     method: 'get',
-
->     url: 'url/to/parse/(:args)/(...)'  // required
-
->   }
-
-> ]
+```js
+// MUST RETURN ARRAY of OBJECTS
+ [
+   {
+     name: 'someName', // required
+     method: 'get',
+     url: 'url/to/parse/(:args)/(...)'  // required
+   }
+ ]
+```
 
 #### options.collect
 Type: `function`
@@ -238,33 +233,23 @@ Detect args in current url segment.
 default detection format of simple url param: (PATTERN_OR_ALIAS:PARAM_NAME)
 default detection format of infinite url params: (...)
 
-> MUST RETURN
-
-> return {
-
->   args: [
-
->     {
-
->       name: 'strName',  // string name mast compatible with template /^[a-z][a-zA-Z0-9_]$/
-
->       pattern: '(?P<strName>.+)'  // VALID NAMING REG_EXP PATTERN FOR DETECT PARAM FROM THIS SEGMENT STRING
-
->     },
-
->     {
-
->       name: 'strName',
-
->       pattern: '(?P<strName>.+)'
-
->     }
-
->   ],
-
->   segment: strSegmentPattern  //    string
-
-> };
+```js
+//MUST RETURN
+segmentObj = {
+  args: [
+    {
+      name: 'strName',  // string name mast compatible with template /^[a-z][a-zA-Z0-9_]$/
+      pattern: '(?P<strName>.+)'  // VALID NAMING REG_EXP PATTERN FOR DETECT PARAM FROM THIS SEGMENT STRING
+    },
+    {
+      name: 'strName',
+      pattern: '(?P<strName>.+)'
+    }
+  ],
+  segment: strSegmentPattern  //    string
+};
+return segmentObj;
+```
 
 ### Usage Examples
 
