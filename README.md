@@ -1,9 +1,13 @@
 # grunt-php-router-gen
 
 > Create a Fastest Php router by grunt
+
 > Generate JSON routing behavior file
+
 > Php Router read the file and find match
+
 > that's all.
+
 > routerphp--class in attached
 
 ## Getting Started
@@ -84,12 +88,19 @@ parse: function (fileContent) {
 ```
 
 > MUST RETURN ARRAY of OBJECTS
+
 > [
+
 >   {
+
 >     name: 'someName', // required
+
 >     method: 'get',
+
 >     url: 'url/to/parse/(:args)/(...)'  // required
+
 >   }
+
 > ]
 
 #### options.collect
@@ -228,18 +239,31 @@ default detection format of simple url param: (PATTERN_OR_ALIAS:PARAM_NAME)
 default detection format of infinite url params: (...)
 
 > MUST RETURN
+
 > return {
+
 >   args: [
+
 >     {
+
 >       name: 'strName',  // string name mast compatible with template /^[a-z][a-zA-Z0-9_]$/
+
 >       pattern: '(?P<strName>.+)'  // VALID NAMING REG_EXP PATTERN FOR DETECT PARAM FROM THIS SEGMENT STRING
+
 >     },
+
 >     {
+
 >       name: 'strName',
+
 >       pattern: '(?P<strName>.+)'
+
 >     }
+
 >   ],
+
 >   segment: strSegmentPattern  //    string
+
 > };
 
 ### Usage Examples
