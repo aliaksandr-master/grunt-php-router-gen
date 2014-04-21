@@ -39,6 +39,11 @@
 		"grunt": "~0.4.4"
 	},
 	"keywords": [
-		"gruntplugin"
+		"gruntplugin",
+		"php",
+		"routing",
+		"router",
+		"generator",
+		"route"
 	]
 }
