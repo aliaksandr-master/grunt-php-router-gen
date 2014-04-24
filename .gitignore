@@ -1,3 +1,16 @@
+# ide and os files
+/.idea/
+*.idea/
+/npm-debug.log
+*.DS_Store
+*.desktop
+*.thumb
+*/.~*
+*/~*
+*/*~
+*.sublime*
+
+
 node_modules
 npm-debug.log
 tmp
