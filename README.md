@@ -1,3 +1,10 @@
+[![npm](http://img.shields.io/npm/v/grunt-php-router-gen?style=flat-square)](https://www.npmjs.com/package/grunt-php-router-gen)
+[![npm](http://img.shields.io/npm/l/grunt-php-router-gen.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+[![Dependency Status](https://david-dm.org/aliaksandr-pasynkau/grunt-php-router-gen.svg?style=flat-square)](https://david-dm.org/aliaksandr-pasynkau/grunt-php-router-gen)
+[![devDependency Status](https://david-dm.org/aliaksandr-pasynkau/grunt-php-router-gen/dev-status.svg?style=flat-square)](https://david-dm.org/aliaksandr-pasynkau/grunt-php-router-gen#info=devDependencies)
+[![Build Status](https://travis-ci.org/aliaksandr-pasynkau/grunt-php-router-gen.svg?branch=master&style=flat-square)](https://travis-ci.org/aliaksandr-pasynkau/grunt-php-router-gen)
+[![Coverage Status](https://img.shields.io/coveralls/aliaksandr-pasynkau/grunt-php-router-gen.svg?style=flat-square)](https://coveralls.io/r/aliaksandr-pasynkau/grunt-php-router-gen?branch=master)
+
 # grunt-php-router-gen
 
 > Create a Fastest Php router by grunt
